@@ -42,3 +42,12 @@ body {
 .logo img { 
     height: 100%;
 }
+
+.right-side-content {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.item {
+    flex: 1;
+}
