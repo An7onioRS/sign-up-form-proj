@@ -21,9 +21,8 @@ body {
 .left-side-content {
     background-image: url(media/halie-west-25xggax4bSA-unsplash.jpg);
     background-size: cover;
-    width: 40vw;
+    width: 80vw;
     position: relative;
-    flex-shrink: 0;
     
     display: flex;
     flex-flow: column wrap;
@@ -63,11 +62,9 @@ body {
 .right-side-content {
     display: flex;
     flex-flow: column wrap;
-    position: relative;
 }
 
 .item {
-    width: 120%;
     flex: 1;
 }
 
@@ -78,23 +75,26 @@ body {
 .upper-part {
     font-weight: bold;
     font-size: 1.3rem;
-    bottom: -150px;
-}
-
-.upper-part > p:first-child {
-    padding-top: 150px;
 }
 
 .upper-part > p {
-    margin: 40px;
+    position: relative;
+    margin-top: 20px;
+    top: 100px;
 }
 
-.middle-part h2, form {
-    margin: 20px 40px;
+.middle-part h2 {
+    position: relative;
+    top: 20px;
+    left: 40px;
+}
+
+.middle-part form {
+    margin: 40px 0 40px 40px;
 }
 
 p input {
-    height: 30px;
+    height: 25px;
 }
 
 form {
@@ -115,7 +115,7 @@ label, input, output {
 }
 
 input {
-    margin: 10px 0;
+    margin: 5px 0;
     border: 3px solid #E5E7EB;
 }
 
@@ -127,10 +127,6 @@ input:invalid {
 .log-in-btn {
     margin: 30px;
     font-size: 1.2rem;
-}
-
-.lower-part {
-    flex-shrink: 0;
 }
 
 .sign-in {
