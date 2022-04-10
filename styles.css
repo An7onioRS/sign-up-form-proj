@@ -61,7 +61,7 @@ body {
 
 .right-side-content {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
 }
 
 .item {
