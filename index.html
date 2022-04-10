@@ -11,21 +11,69 @@
                 <img src="media/odin-lined.png" alt="Odin's Logo">
                 <h1>ODIN</h1>
             </div>
+            <footer class="left-footer">Photo by Hallie West on Unsplash</footer>
         </div>
         <div class="right-side-content">
             <div class="item upper-part">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate necessitatibus, minima excepturi impedit maiores consequuntur nulla voluptatibus velit minus explicabo aliquam odio quibusdam error. Ea aliquam dignissimos debitis, porro id facilis voluptas quidem incidunt ipsum aut dolorem. Veniam aperiam quidem natus veritatis! Iusto repudiandae repellendus vitae dicta consequuntur doloribus incidunt.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, minima.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur eum repellendus ratione error, expedita voluptas recusandae quis molestias aut assumenda.</p>
+                <p>You know you want it.</p>
             </div>
             <div class="item middle-part">
+                <h2>Let's do this!</h2>
                 <form action="www.sql.com" method="post">
-
+                    <div class="form-column">
+                        <p>
+                            <label for="fName">First Name<abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+                            <input type="text" name="fName" id="fName">
+                        </p>
+                        <p>
+                            <label for="email">Email<abbr title="This field is mandatory" aria-required="true">*</abbr></label>
+                            <input type="email" name="email" id="email">
+                        </p>
+                        <p>
+                            <label for="pass">Password<abbr title="This field is required" aria-true="true">*</abbr></label>
+                            <input type="password" name="password" id="pass" minlength="8" maxlength="30">
+                            <output class="password-matching" for="pass"></output>
+                        </p>
+                    </div>
+                    <div class="form-column">
+                        <p>
+                            <label for="lName">Last Name<abbr title="This field is required" aria-required="true">*</abbr></label>
+                            <input type="text" name="lName" id="lName">
+                        </p>
+                        <p>
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" name="phoneNumber" id="phoneNumber" pattern="[789][0-9]{9}" minlength="8" maxlength="30">
+                        </p>
+                        <p>
+                            <label for="passwordConfirmation">Confirm Password:</label>
+                            <input type="password" name="passwordConfirmation" id="passwordConfirmation" minlength="8" maxlength="30">
+                        </p>
+                    </div>
                 </form>
             </div>
             <div class="item lower-part">
-                <button>Create Account</button>
-                <button>Already have an account? <a href="www.login.com">Log In</a></button>
+                <div class="sign-in-btn">
+                    <button class="sign-in">Create Account</button>
+                </div>
+                <div class="log-in-btn">
+                    <p>Already have an account? <a href="www.login.com">Log In</a></p>
+                </div>
             </div>
         </div>
+        <script>
+            const pass = document.querySelector('#pass');
+            const confirmPass = document.querySelector('#passwordConfirmation');
+            const passOutput = document.querySelector('.password-matching');
+            const signInBtn = document.querySelector('.sign-in');
+
+            signInBtn.addEventListener('click', function() {
+                if (pass !== confirmPass) {
+                    passOutput.textContent = "*Passwords do not match!";
+                    passOutput.style.color = "red";
+                    passOutput.style.fontSize = "14px";
+                }
+            });
+        </script>
     </body>
 </html>
